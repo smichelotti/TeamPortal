@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>@ViewBag.Title</title>
+   <link href="@Url.Content("~/Content/bootstrap.css")" rel="stylesheet" type="text/css" />
+   <link href="@Url.Content("~/Content/bootstrap-responsive.css")" rel="stylesheet" type="text/css" />
+   <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+   <link href="@Url.Content("~/Scripts/google-code-prettify/prettify.css")" rel="stylesheet" type="text/css" />
+   <link rel="shortcut icon" type="image/x-icon" href="http://twitter.github.com/bootstrap/assets/ico/favicon.ico">
+</head>
+<body>
+   <div class="container" style="padding-top: 40px;">
+      @RenderBody()
+   </div>
+   <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+   <script src="/Scripts/jquery-1.7.1.min.js"></script>
+   <script src="/Scripts/google-code-prettify/prettify.js"></script>
+   <script src="/Scripts/bootstrap-transition.js"></script>
+   <script src="/Scripts/bootstrap-alert.js"></script>
+   <script src="/Scripts/bootstrap-modal.js"></script>
+   <script src="/Scripts/bootstrap-dropdown.js"></script>
+   <script src="/Scripts/bootstrap-scrollspy.js"></script>
+   <script src="/Scripts/bootstrap-tab.js"></script>
+   <script src="/Scripts/bootstrap-tooltip.js"></script>
+   <script src="/Scripts/bootstrap-popover.js"></script>
+   <script src="/Scripts/bootstrap-button.js"></script>
+   <script src="/Scripts/bootstrap-collapse.js"></script>
+   <script src="/Scripts/bootstrap-carousel.js"></script>
+   <script src="/Scripts/bootstrap-typeahead.js"></script>
+   <script src="/Scripts/jquery.tablesorter.js"></script>
+   <script src="/Scripts/jquery.tablesorter.pager.js"></script>
+   @RenderSection("_javascript", false)
+</body>
+</html>

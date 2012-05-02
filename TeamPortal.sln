@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamPortal.Web", "TeamPortal.Web\TeamPortal.Web.csproj", "{0658E36D-DA6E-42BC-A782-0BBD0C764B75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamPortal.Web.Tests", "TeamPortal.Web.Tests\TeamPortal.Web.Tests.csproj", "{966D3A83-EB38-4553-B6B3-A5A179808F00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0658E36D-DA6E-42BC-A782-0BBD0C764B75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0658E36D-DA6E-42BC-A782-0BBD0C764B75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0658E36D-DA6E-42BC-A782-0BBD0C764B75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0658E36D-DA6E-42BC-A782-0BBD0C764B75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{966D3A83-EB38-4553-B6B3-A5A179808F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{966D3A83-EB38-4553-B6B3-A5A179808F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{966D3A83-EB38-4553-B6B3-A5A179808F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{966D3A83-EB38-4553-B6B3-A5A179808F00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,94 @@
+@using TeamPortal.Web;
+@model TeamPortal.Web.Models.Player
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="row">
+    <div class="span4">
+
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.FirstName)
+            <div class="controls">
+                @Html.EditorFor(model => model.FirstName)
+                @Html.ValidationMessageFor(model => model.FirstName)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.LastName)
+            <div class="controls">
+                @Html.EditorFor(model => model.LastName)
+                @Html.ValidationMessageFor(model => model.LastName)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.JerseyNumber)
+            <div class="controls">
+                @Html.EditorFor(model => model.JerseyNumber)
+                @Html.ValidationMessageFor(model => model.JerseyNumber)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.EmailAddress)
+            <div class="controls">
+                @Html.EditorFor(model => model.EmailAddress)
+                @Html.ValidationMessageFor(model => model.EmailAddress)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.StreetAddress)
+            <div class="controls">
+                @Html.EditorFor(model => model.StreetAddress)
+                @Html.ValidationMessageFor(model => model.StreetAddress)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.City)
+            <div class="controls">
+                @Html.EditorFor(model => model.City)
+                @Html.ValidationMessageFor(model => model.City)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.StateId)
+            <div class="controls">
+                @Html.DropDownListFor(model => model.StateId, ((IEnumerable<TeamPortal.Web.Models.State>)ViewBag.States).Select(option => new SelectListItem
+                   {
+                       Text = option.Name,
+                       Value = option.Id.ToString(),
+                       Selected = (Model != null) && (option.Id == Model.StateId)
+                   }), "Choose...")
+                @Html.ValidationMessageFor(model => model.StateId)
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.BSLabelFor(model => model.PostalCode)
+            <div class="controls">
+                @Html.EditorFor(model => model.PostalCode)
+                @Html.ValidationMessageFor(model => model.PostalCode)
+            </div>
+        </div>
+
+        @if (Model != null) {
+            @Html.HiddenFor(model => model.TeamId)    
+        }
+        else { 
+            @Html.Hidden("TeamId", this.ViewContext.HttpContext.Session["TeamId"])
+        }
+        
+
+    </div>
+
+    <div class="span4">
+        <div class="control-group">
+            @Html.EditorFor(model => model.PhotoToUpload)
+            <div id="playerImg">
+            @if (Model != null && Model.PhotoUri != null)
+            {
+                <img src="@Model.PhotoUri" alt="@Model.FirstName" />
+            }
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="@Url.Content("~/Scripts/display-file-select.js")" type="text/javascript"></script>

@@ -1,0 +1,22 @@
+@model TeamPortal.Web.Models.Player
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create", "Roster", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" })) 
+{ 
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Add Player</legend>
+
+		@Html.Partial("_CreateOrEdit", Model)
+
+        <div class="form-actions">
+            <input type="submit" value="Save" class="btn btn-primary" />
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn" })
+        </div>
+    </fieldset>
+}
